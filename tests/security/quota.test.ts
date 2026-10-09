@@ -97,7 +97,7 @@ describe('insight summaries have their own monthly limit', () => {
 
   it('counts insights separately from uploads and stops at the limit', async () => {
     const user = await insertUser(db)
-    for (let i = 1; i <= 3; i++) {
+    for (let i = 1; i <= 6; i++) {
       const { data, error } = await reserveInsight(user)
       expect(error).toBeNull()
       await finish(data!.run_id, 0.01, true)

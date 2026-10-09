@@ -35,7 +35,7 @@ Supabase and Cloudflare dashboards or the CLI on your machine, never into the re
    npx supabase db push
    ```
    This applies everything in `supabase/migrations` (quota tables, functions, limits of 3 uploads
-   and 3 summaries per user per month, and a US$3 global daily cap).
+   and 6 summaries per user per month, and a US$3 global daily cap).
 3. **Authentication → Sign In / Providers**:
    - Allow anonymous sign-ins: **on**
    - Email provider sign-ups: **off**
@@ -95,7 +95,7 @@ Supabase and Cloudflare dashboards or the CLI on your machine, never into the re
 Limits live in the `private.limits` table, editable in the SQL editor without a deploy:
 
 ```sql
-update private.limits set monthly_uploads_per_user = 3, monthly_insights_per_user = 3, global_daily_cap_usd = 3;
+update private.limits set monthly_uploads_per_user = 3, monthly_insights_per_user = 6, global_daily_cap_usd = 3;
 ```
 
 ## Updating

@@ -76,6 +76,8 @@ export interface Insight {
   suggestions: string[]
   generated_at: string
   model: string
+  /** summaryBasis() of the figures it was written from; missing on summaries written before 2026-10. */
+  basis?: string
 }
 
 export interface Run {

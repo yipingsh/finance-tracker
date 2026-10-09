@@ -40,7 +40,7 @@ browser (React + Vite + Tailwind v4, Dexie)
 ```
 
 - Quotas/limits: `supabase/migrations/*` → `private` schema (`limits`, `usage_monthly`,
-  `daily_spend`, `runs`). 3 uploads + 3 summaries per user per month, US$3 global daily cap.
+  `daily_spend`, `runs`). 3 uploads + 6 summaries (3 automatic + 3 rewrites) per user per month, US$3 global daily cap.
   Atomic conditional updates, one run at a time per user, stale runs expire after 10 min.
 - Auth: Supabase anonymous sign-in behind Cloudflare Turnstile; no email accounts.
 - Browser data: `src/lib/db.ts` (Dexie schema, versioned upgrades, separate demo database),

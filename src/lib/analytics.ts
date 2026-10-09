@@ -168,6 +168,15 @@ export function summariseMonth(
   }
 }
 
+/**
+ * The figures a summary's numbers come from (income, spending and each category's total) as one
+ * comparable string. Saved with each summary; if it no longer matches, the summary is out of date.
+ */
+export function summaryBasis(s: MonthSummary): string {
+  const categories = s.categories.map((c) => `${c.category}:${c.cents}`).sort().join('|')
+  return `${s.totals.income}/${s.totals.spent}/${categories}`
+}
+
 /** Average monthly spending per category across the months present (for the categoriser's context). */
 export function monthlyAverages(txns: TxnLike[]): { category: string; average_cents: number }[] {
   const months = new Set(txns.map((t) => t.month)).size || 1

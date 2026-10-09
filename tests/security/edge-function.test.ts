@@ -169,7 +169,7 @@ describe('generate-insights (monthly summary)', () => {
   it('enforces the monthly summary limit on the server', async () => {
     const { accessToken, userId } = await signedInUser()
     await db.query(
-      `insert into private.usage_monthly (user_id, month, insights) values ($1, date_trunc('month', private.sg_today())::date, 3)`,
+      `insert into private.usage_monthly (user_id, month, insights) values ($1, date_trunc('month', private.sg_today())::date, 6)`,
       [userId],
     )
     const res = await post(JSON.stringify(validSummary), accessToken)

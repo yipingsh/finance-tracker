@@ -26,7 +26,7 @@ describe('browser access to the database', () => {
   it('a signed-in user can read their own quota', async () => {
     const { data, error } = await user.client.rpc('get_my_quota').single()
     expect(error).toBeNull()
-    expect(data).toEqual({ uploads_used: 0, uploads_limit: 3, insights_used: 0, insights_limit: 3, service_available: true })
+    expect(data).toEqual({ uploads_used: 0, uploads_limit: 3, insights_used: 0, insights_limit: 6, service_available: true })
   })
 
   it("another user's usage never shows up in your quota", async () => {

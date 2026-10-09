@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { detectRecurring, monthlyTotals, spendingByCategory, summariseMonth, type TxnLike } from '../../src/lib/analytics'
+import { detectRecurring, monthlyTotals, spendingByCategory, summariseMonth, summaryBasis, type TxnLike } from '../../src/lib/analytics'
 
 describe('summariseMonth', () => {
   const txns = [
@@ -15,6 +15,14 @@ describe('summariseMonth', () => {
     expect(s.budgets).toEqual([{ category: 'Food & Drink', budget_cents: 1200, spent_cents: 1500 }])
     expect(s.months_of_history).toBe(2)
     expect(JSON.stringify(s)).not.toContain('2026-09-05') // no individual transaction dates
+  })
+
+  it('changes the summary basis when recategorising changes income or spending', () => {
+    const before = summaryBasis(summariseMonth(txns, '2026-09', [], []))
+    const moved = txns.map((x) => (x.merchant === 'Employer' ? { ...x, category: 'Own-account transfers' } : x))
+    expect(summaryBasis(summariseMonth(moved, '2026-09', [], []))).not.toBe(before)
+    // Budgets and flags don't change the figures a summary quotes.
+    expect(summaryBasis(summariseMonth(txns, '2026-09', [{ category: 'Food & Drink', amount_cents: 1 }], [{ kind: 'x', explanation: 'y' }]))).toBe(before)
   })
 })
 
