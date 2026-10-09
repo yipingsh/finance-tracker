@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Colour roles. Light mode only. Chart colours come from the validated reference palette;
+   the brand and accent colours are for UI chrome (header, buttons, links), never for data. */
+:root {
+  color-scheme: light;
+  --page: #f6f7f9;
+  --surface: #f6f8fb;
+  --surface-2: #ffffff;
+  --surface-3: #f1f4f8;
+  --border: #e2e7ef;
+  --grid: #edf0f5;
+  --text-1: #0f172a;
+  --text-2: #475569;
+  --text-3: #64748b;
+
+  --brand-900: #0b1a36;
+  --brand-700: #173a6b;
+  --brand-500: #2a5a9b;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-soft: #e6eeff;
+  --link: #1d4ed8;
+
+  --series-1: #2a78d6;
+  --series-1-soft: #cde2fb;
+  --good: #0ca30c;
+  --warning: #fab219;
+  --critical: #d03b3b;
+
+  /* Categorical slots from the validated reference palette, in its CVD-safe order */
+  --cat-1: #2a78d6;
+  --cat-2: #eb6834;
+  --cat-3: #1baf7a;
+  --cat-4: #eda100;
+  --cat-5: #e87ba4;
+  --cat-6: #008300;
+  --cat-7: #4a3aa7;
+  --cat-8: #e34948;
+  --cat-other: #a3a29c;
+  --chart-ink: #94a0b4;
+  --chart-ink-strong: #1e293b;
+
+  --shadow-card: 0 1px 2px rgb(15 23 42 / 0.04);
+}
+
+body {
+  background: var(--page);
+  color: var(--text-1);
+  min-height: 100vh;
+}
+
+/* White card lifted off the tinted page. */
+@utility card {
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  box-shadow: var(--shadow-card);
+}

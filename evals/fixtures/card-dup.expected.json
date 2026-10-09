@@ -1,0 +1,238 @@
+{
+  "synthetic": true,
+  "layout": "card",
+  "expected_outcome": "verified",
+  "statement": {
+    "account_type": "credit_card",
+    "period_start": "2026-09-26",
+    "period_end": "2026-10-25",
+    "opening_balance_cents": 67594,
+    "closing_balance_cents": 98521,
+    "total_debits_cents": 88561,
+    "total_credits_cents": 57634
+  },
+  "transactions": [
+    {
+      "date": "2026-09-27",
+      "amount_cents": -3783,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-09-28",
+      "amount_cents": 56377,
+      "balance_after_cents": null,
+      "category": "Own-account transfers"
+    },
+    {
+      "date": "2026-09-29",
+      "amount_cents": -150,
+      "balance_after_cents": null,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-09-30",
+      "amount_cents": -1598,
+      "balance_after_cents": null,
+      "category": "Subscriptions"
+    },
+    {
+      "date": "2026-09-30",
+      "amount_cents": 1257,
+      "balance_after_cents": null,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-09-30",
+      "amount_cents": -10973,
+      "balance_after_cents": null,
+      "category": "Travel"
+    },
+    {
+      "date": "2026-10-01",
+      "amount_cents": -6321,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-01",
+      "amount_cents": -4548,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-01",
+      "amount_cents": -1551,
+      "balance_after_cents": null,
+      "category": "Health"
+    },
+    {
+      "date": "2026-10-01",
+      "amount_cents": -503,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-01",
+      "amount_cents": -10343,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-10-01",
+      "amount_cents": -158,
+      "balance_after_cents": null,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-01",
+      "amount_cents": -84,
+      "balance_after_cents": null,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-01",
+      "amount_cents": -5759,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-01",
+      "amount_cents": -5759,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-02",
+      "amount_cents": -2754,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-10-02",
+      "amount_cents": -1747,
+      "balance_after_cents": null,
+      "category": "Health"
+    },
+    {
+      "date": "2026-10-02",
+      "amount_cents": -2578,
+      "balance_after_cents": null,
+      "category": "Health"
+    },
+    {
+      "date": "2026-10-03",
+      "amount_cents": -136,
+      "balance_after_cents": null,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-04",
+      "amount_cents": -3229,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-05",
+      "amount_cents": -2447,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-10-05",
+      "amount_cents": -2382,
+      "balance_after_cents": null,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-05",
+      "amount_cents": -1275,
+      "balance_after_cents": null,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-05",
+      "amount_cents": -1989,
+      "balance_after_cents": null,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-06",
+      "amount_cents": -242,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-06",
+      "amount_cents": -171,
+      "balance_after_cents": null,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-06",
+      "amount_cents": -1814,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-10-06",
+      "amount_cents": -1660,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-10-06",
+      "amount_cents": -1872,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-10-06",
+      "amount_cents": -2791,
+      "balance_after_cents": null,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-07",
+      "amount_cents": -73,
+      "balance_after_cents": null,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-07",
+      "amount_cents": -1140,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-07",
+      "amount_cents": -883,
+      "balance_after_cents": null,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-07",
+      "amount_cents": -4701,
+      "balance_after_cents": null,
+      "category": "Travel"
+    },
+    {
+      "date": "2026-10-07",
+      "amount_cents": -1526,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": -1621,
+      "balance_after_cents": null,
+      "category": "Health"
+    }
+  ],
+  "injected_duplicates": [
+    [
+      13,
+      14
+    ]
+  ]
+}

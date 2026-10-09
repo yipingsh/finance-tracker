@@ -1,0 +1,473 @@
+{
+  "synthetic": true,
+  "layout": "bank-a",
+  "expected_outcome": "verified",
+  "statement": {
+    "account_type": "bank_account",
+    "period_start": "2026-10-01",
+    "period_end": "2026-10-31",
+    "opening_balance_cents": 30836,
+    "closing_balance_cents": 111620,
+    "total_debits_cents": 144277,
+    "total_credits_cents": 225061
+  },
+  "transactions": [
+    {
+      "date": "2026-10-02",
+      "amount_cents": -2579,
+      "balance_after_cents": 28257,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-10-02",
+      "amount_cents": -2285,
+      "balance_after_cents": 25972,
+      "category": "Bills & Utilities"
+    },
+    {
+      "date": "2026-10-03",
+      "amount_cents": 120000,
+      "balance_after_cents": 145972,
+      "category": "Own-account transfers"
+    },
+    {
+      "date": "2026-10-03",
+      "amount_cents": -19,
+      "balance_after_cents": 145953,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-04",
+      "amount_cents": -1598,
+      "balance_after_cents": 144355,
+      "category": "Subscriptions"
+    },
+    {
+      "date": "2026-10-04",
+      "amount_cents": -5841,
+      "balance_after_cents": 138514,
+      "category": "Investments & Savings"
+    },
+    {
+      "date": "2026-10-05",
+      "amount_cents": -11,
+      "balance_after_cents": 138503,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-05",
+      "amount_cents": -3595,
+      "balance_after_cents": 134908,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-05",
+      "amount_cents": -3573,
+      "balance_after_cents": 131335,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-05",
+      "amount_cents": -193,
+      "balance_after_cents": 131142,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-06",
+      "amount_cents": -5108,
+      "balance_after_cents": 126034,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-07",
+      "amount_cents": -38,
+      "balance_after_cents": 125996,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": 36,
+      "balance_after_cents": 126032,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": -521,
+      "balance_after_cents": 125511,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-09",
+      "amount_cents": 98,
+      "balance_after_cents": 125609,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-10-09",
+      "amount_cents": -2364,
+      "balance_after_cents": 123245,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-09",
+      "amount_cents": -315,
+      "balance_after_cents": 122930,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-10",
+      "amount_cents": -519,
+      "balance_after_cents": 122411,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-10",
+      "amount_cents": 183,
+      "balance_after_cents": 122594,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-10-11",
+      "amount_cents": -35,
+      "balance_after_cents": 122559,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-12",
+      "amount_cents": -21,
+      "balance_after_cents": 122538,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-12",
+      "amount_cents": 37,
+      "balance_after_cents": 122575,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-10-12",
+      "amount_cents": -385,
+      "balance_after_cents": 122190,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-12",
+      "amount_cents": -11892,
+      "balance_after_cents": 110298,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-10-12",
+      "amount_cents": -9,
+      "balance_after_cents": 110289,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-13",
+      "amount_cents": -5893,
+      "balance_after_cents": 104396,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-13",
+      "amount_cents": -5184,
+      "balance_after_cents": 99212,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-13",
+      "amount_cents": -6200,
+      "balance_after_cents": 93012,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-10-14",
+      "amount_cents": -5885,
+      "balance_after_cents": 87127,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-14",
+      "amount_cents": -30,
+      "balance_after_cents": 87097,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-14",
+      "amount_cents": -426,
+      "balance_after_cents": 86671,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-14",
+      "amount_cents": -700,
+      "balance_after_cents": 85971,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-15",
+      "amount_cents": -1628,
+      "balance_after_cents": 84343,
+      "category": "Health"
+    },
+    {
+      "date": "2026-10-15",
+      "amount_cents": -4607,
+      "balance_after_cents": 79736,
+      "category": "Bills & Utilities"
+    },
+    {
+      "date": "2026-10-16",
+      "amount_cents": -2380,
+      "balance_after_cents": 77356,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-16",
+      "amount_cents": -218,
+      "balance_after_cents": 77138,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-17",
+      "amount_cents": -34,
+      "balance_after_cents": 77104,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-18",
+      "amount_cents": 101424,
+      "balance_after_cents": 178528,
+      "category": "Income"
+    },
+    {
+      "date": "2026-10-18",
+      "amount_cents": -4053,
+      "balance_after_cents": 174475,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-19",
+      "amount_cents": -410,
+      "balance_after_cents": 174065,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-19",
+      "amount_cents": -805,
+      "balance_after_cents": 173260,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-19",
+      "amount_cents": -1360,
+      "balance_after_cents": 171900,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-20",
+      "amount_cents": -1342,
+      "balance_after_cents": 170558,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-21",
+      "amount_cents": -2373,
+      "balance_after_cents": 168185,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-10-22",
+      "amount_cents": -859,
+      "balance_after_cents": 167326,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-22",
+      "amount_cents": -5982,
+      "balance_after_cents": 161344,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-23",
+      "amount_cents": -746,
+      "balance_after_cents": 160598,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-23",
+      "amount_cents": -6605,
+      "balance_after_cents": 153993,
+      "category": "Investments & Savings"
+    },
+    {
+      "date": "2026-10-24",
+      "amount_cents": -837,
+      "balance_after_cents": 153156,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-25",
+      "amount_cents": -16,
+      "balance_after_cents": 153140,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-26",
+      "amount_cents": -22,
+      "balance_after_cents": 153118,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-27",
+      "amount_cents": -1137,
+      "balance_after_cents": 151981,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-28",
+      "amount_cents": -475,
+      "balance_after_cents": 151506,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-28",
+      "amount_cents": 3066,
+      "balance_after_cents": 154572,
+      "category": "Money received"
+    },
+    {
+      "date": "2026-10-28",
+      "amount_cents": 174,
+      "balance_after_cents": 154746,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-10-29",
+      "amount_cents": -2763,
+      "balance_after_cents": 151983,
+      "category": "Health"
+    },
+    {
+      "date": "2026-10-29",
+      "amount_cents": -3149,
+      "balance_after_cents": 148834,
+      "category": "Bills & Utilities"
+    },
+    {
+      "date": "2026-10-29",
+      "amount_cents": -5087,
+      "balance_after_cents": 143747,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -290,
+      "balance_after_cents": 143457,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -4526,
+      "balance_after_cents": 138931,
+      "category": "Bills & Utilities"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -9826,
+      "balance_after_cents": 129105,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -505,
+      "balance_after_cents": 128600,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -723,
+      "balance_after_cents": 127877,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -1388,
+      "balance_after_cents": 126489,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -223,
+      "balance_after_cents": 126266,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -3473,
+      "balance_after_cents": 122793,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -537,
+      "balance_after_cents": 122256,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -5356,
+      "balance_after_cents": 116900,
+      "category": "Investments & Savings"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -895,
+      "balance_after_cents": 116005,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -446,
+      "balance_after_cents": 115559,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -2031,
+      "balance_after_cents": 113528,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -297,
+      "balance_after_cents": 113231,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -25,
+      "balance_after_cents": 113206,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -808,
+      "balance_after_cents": 112398,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-30",
+      "amount_cents": -821,
+      "balance_after_cents": 111577,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-31",
+      "amount_cents": 43,
+      "balance_after_cents": 111620,
+      "category": "Interest"
+    }
+  ],
+  "injected_duplicates": []
+}

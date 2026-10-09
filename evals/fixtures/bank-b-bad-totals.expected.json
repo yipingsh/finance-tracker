@@ -1,0 +1,263 @@
+{
+  "synthetic": true,
+  "layout": "bank-b",
+  "expected_outcome": "failed",
+  "statement": {
+    "account_type": "bank_account",
+    "period_start": "2026-10-01",
+    "period_end": "2026-10-31",
+    "opening_balance_cents": 72462,
+    "closing_balance_cents": 232650,
+    "total_debits_cents": 63971,
+    "total_credits_cents": 224159
+  },
+  "transactions": [
+    {
+      "date": "2026-10-02",
+      "amount_cents": 81,
+      "balance_after_cents": 72543,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-10-03",
+      "amount_cents": 111,
+      "balance_after_cents": 72654,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-10-04",
+      "amount_cents": 120000,
+      "balance_after_cents": null,
+      "category": "Own-account transfers"
+    },
+    {
+      "date": "2026-10-04",
+      "amount_cents": -281,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-04",
+      "amount_cents": -1598,
+      "balance_after_cents": null,
+      "category": "Subscriptions"
+    },
+    {
+      "date": "2026-10-04",
+      "amount_cents": -814,
+      "balance_after_cents": null,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-04",
+      "amount_cents": -1241,
+      "balance_after_cents": null,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-04",
+      "amount_cents": -2728,
+      "balance_after_cents": 185992,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-05",
+      "amount_cents": 174,
+      "balance_after_cents": null,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-10-05",
+      "amount_cents": -36,
+      "balance_after_cents": null,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-05",
+      "amount_cents": -12275,
+      "balance_after_cents": 173855,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-10-06",
+      "amount_cents": -396,
+      "balance_after_cents": 173459,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-07",
+      "amount_cents": -1567,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-07",
+      "amount_cents": -334,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-07",
+      "amount_cents": -375,
+      "balance_after_cents": 171183,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": -306,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": -4734,
+      "balance_after_cents": null,
+      "category": "Investments & Savings"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": -1137,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": -376,
+      "balance_after_cents": null,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": -575,
+      "balance_after_cents": null,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": 103557,
+      "balance_after_cents": null,
+      "category": "Income"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": -638,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": -6855,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": -597,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": -701,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-08",
+      "amount_cents": -3978,
+      "balance_after_cents": 254843,
+      "category": "Investments & Savings"
+    },
+    {
+      "date": "2026-10-09",
+      "amount_cents": -29,
+      "balance_after_cents": 254814,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-10-10",
+      "amount_cents": -2670,
+      "balance_after_cents": null,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-10",
+      "amount_cents": -132,
+      "balance_after_cents": null,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-10",
+      "amount_cents": -1363,
+      "balance_after_cents": 250649,
+      "category": "Health"
+    },
+    {
+      "date": "2026-10-11",
+      "amount_cents": -309,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-11",
+      "amount_cents": -4452,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-10-11",
+      "amount_cents": -3564,
+      "balance_after_cents": 242324,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-12",
+      "amount_cents": 143,
+      "balance_after_cents": null,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-10-12",
+      "amount_cents": -4748,
+      "balance_after_cents": null,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-12",
+      "amount_cents": -2295,
+      "balance_after_cents": 235424,
+      "category": "Payments to people"
+    },
+    {
+      "date": "2026-10-13",
+      "amount_cents": -1508,
+      "balance_after_cents": null,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-10-13",
+      "amount_cents": -502,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-13",
+      "amount_cents": 87,
+      "balance_after_cents": null,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-10-13",
+      "amount_cents": -857,
+      "balance_after_cents": 232644,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-10-31",
+      "amount_cents": 6,
+      "balance_after_cents": 232650,
+      "category": "Interest"
+    }
+  ],
+  "injected_duplicates": []
+}

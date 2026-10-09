@@ -1,0 +1,12 @@
+# Security headers for Cloudflare Pages (this file is copied into the build as-is).
+# The app keeps users' financial data in the browser, so blocking injected scripts (XSS) is the
+# main defence: only our own scripts, Supabase and Cloudflare Turnstile are allowed.
+# Keep in sync with `preview.headers` in vite.config.ts (which also allows local Supabase).
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; connect-src 'self' https://*.supabase.co; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains

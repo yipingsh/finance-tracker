@@ -1,0 +1,197 @@
+{
+  "synthetic": true,
+  "layout": "card",
+  "expected_outcome": "verified",
+  "statement": {
+    "account_type": "credit_card",
+    "period_start": "2026-08-26",
+    "period_end": "2026-09-25",
+    "opening_balance_cents": 65743,
+    "closing_balance_cents": 93546,
+    "total_debits_cents": 84694,
+    "total_credits_cents": 56891
+  },
+  "transactions": [
+    {
+      "date": "2026-08-26",
+      "amount_cents": 2447,
+      "balance_after_cents": null,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-08-27",
+      "amount_cents": 49105,
+      "balance_after_cents": null,
+      "category": "Own-account transfers"
+    },
+    {
+      "date": "2026-08-28",
+      "amount_cents": -4053,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-28",
+      "amount_cents": -1598,
+      "balance_after_cents": null,
+      "category": "Subscriptions"
+    },
+    {
+      "date": "2026-08-28",
+      "amount_cents": -14885,
+      "balance_after_cents": null,
+      "category": "Travel"
+    },
+    {
+      "date": "2026-08-29",
+      "amount_cents": -1098,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-08-30",
+      "amount_cents": -3679,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-08-30",
+      "amount_cents": -368,
+      "balance_after_cents": null,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-08-30",
+      "amount_cents": -1391,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-08-30",
+      "amount_cents": -310,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-08-31",
+      "amount_cents": -2885,
+      "balance_after_cents": null,
+      "category": "Health"
+    },
+    {
+      "date": "2026-09-01",
+      "amount_cents": -5564,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-09-01",
+      "amount_cents": -1491,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-09-02",
+      "amount_cents": -3920,
+      "balance_after_cents": null,
+      "category": "Travel"
+    },
+    {
+      "date": "2026-09-02",
+      "amount_cents": -49,
+      "balance_after_cents": null,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-09-02",
+      "amount_cents": -6085,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-09-03",
+      "amount_cents": -1959,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-09-04",
+      "amount_cents": -753,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-09-04",
+      "amount_cents": -4528,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-09-04",
+      "amount_cents": -7480,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-09-05",
+      "amount_cents": -1120,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-09-06",
+      "amount_cents": 2795,
+      "balance_after_cents": null,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-09-06",
+      "amount_cents": -3288,
+      "balance_after_cents": null,
+      "category": "Health"
+    },
+    {
+      "date": "2026-09-07",
+      "amount_cents": -4378,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-09-07",
+      "amount_cents": -2327,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-09-08",
+      "amount_cents": -918,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-09-08",
+      "amount_cents": -2859,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-09-08",
+      "amount_cents": -5239,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-09-09",
+      "amount_cents": 2544,
+      "balance_after_cents": null,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-09-10",
+      "amount_cents": -2469,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    }
+  ],
+  "injected_duplicates": []
+}

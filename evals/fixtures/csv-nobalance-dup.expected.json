@@ -1,0 +1,208 @@
+{
+  "synthetic": true,
+  "layout": "csv",
+  "expected_outcome": "unverified",
+  "statement": {
+    "account_type": "e_wallet",
+    "period_start": null,
+    "period_end": null,
+    "opening_balance_cents": null,
+    "closing_balance_cents": null,
+    "total_debits_cents": null,
+    "total_credits_cents": null
+  },
+  "transactions": [
+    {
+      "date": "2026-08-01",
+      "amount_cents": 20000,
+      "balance_after_cents": null,
+      "category": "Own-account transfers"
+    },
+    {
+      "date": "2026-08-02",
+      "amount_cents": 7567,
+      "balance_after_cents": null,
+      "category": "Own-account transfers"
+    },
+    {
+      "date": "2026-08-03",
+      "amount_cents": 4297,
+      "balance_after_cents": null,
+      "category": "Own-account transfers"
+    },
+    {
+      "date": "2026-08-04",
+      "amount_cents": -3755,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-08-05",
+      "amount_cents": -399,
+      "balance_after_cents": null,
+      "category": "Subscriptions"
+    },
+    {
+      "date": "2026-08-06",
+      "amount_cents": -5632,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-07",
+      "amount_cents": -5232,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-08",
+      "amount_cents": -3980,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-09",
+      "amount_cents": -2557,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-10",
+      "amount_cents": -3014,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-11",
+      "amount_cents": -3879,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-08-12",
+      "amount_cents": 2797,
+      "balance_after_cents": null,
+      "category": "Money received"
+    },
+    {
+      "date": "2026-08-13",
+      "amount_cents": -4387,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-13",
+      "amount_cents": -4387,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-14",
+      "amount_cents": 2791,
+      "balance_after_cents": null,
+      "category": "Money received"
+    },
+    {
+      "date": "2026-08-15",
+      "amount_cents": -2073,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-16",
+      "amount_cents": -3431,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-08-17",
+      "amount_cents": 7717,
+      "balance_after_cents": null,
+      "category": "Own-account transfers"
+    },
+    {
+      "date": "2026-08-18",
+      "amount_cents": -553,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-08-19",
+      "amount_cents": -1809,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-20",
+      "amount_cents": 761,
+      "balance_after_cents": null,
+      "category": "Money received"
+    },
+    {
+      "date": "2026-08-21",
+      "amount_cents": -3220,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-22",
+      "amount_cents": -3116,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-23",
+      "amount_cents": 2931,
+      "balance_after_cents": null,
+      "category": "Own-account transfers"
+    },
+    {
+      "date": "2026-08-24",
+      "amount_cents": 898,
+      "balance_after_cents": null,
+      "category": "Money received"
+    },
+    {
+      "date": "2026-08-25",
+      "amount_cents": -5418,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-08-26",
+      "amount_cents": -2748,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-08-27",
+      "amount_cents": -1614,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-08-28",
+      "amount_cents": -987,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-08-29",
+      "amount_cents": 704,
+      "balance_after_cents": null,
+      "category": "Money received"
+    },
+    {
+      "date": "2026-08-30",
+      "amount_cents": -3543,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    }
+  ],
+  "injected_duplicates": [
+    [
+      12,
+      13
+    ]
+  ]
+}

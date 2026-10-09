@@ -1,0 +1,137 @@
+{
+  "synthetic": true,
+  "layout": "card",
+  "expected_outcome": "verified",
+  "statement": {
+    "account_type": "credit_card",
+    "period_start": "2026-06-26",
+    "period_end": "2026-07-25",
+    "opening_balance_cents": 63131,
+    "closing_balance_cents": 58161,
+    "total_debits_cents": 37058,
+    "total_credits_cents": 42028
+  },
+  "transactions": [
+    {
+      "date": "2026-06-26",
+      "amount_cents": -429,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-06-26",
+      "amount_cents": 41470,
+      "balance_after_cents": null,
+      "category": "Own-account transfers"
+    },
+    {
+      "date": "2026-06-27",
+      "amount_cents": -851,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-06-28",
+      "amount_cents": -1598,
+      "balance_after_cents": null,
+      "category": "Subscriptions"
+    },
+    {
+      "date": "2026-06-28",
+      "amount_cents": -1787,
+      "balance_after_cents": null,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-06-28",
+      "amount_cents": -2804,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-06-28",
+      "amount_cents": -1273,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-06-28",
+      "amount_cents": -1413,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-06-28",
+      "amount_cents": -409,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-06-28",
+      "amount_cents": -2040,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-06-28",
+      "amount_cents": -6386,
+      "balance_after_cents": null,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-06-29",
+      "amount_cents": -1496,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-06-30",
+      "amount_cents": -1835,
+      "balance_after_cents": null,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-06-30",
+      "amount_cents": 558,
+      "balance_after_cents": null,
+      "category": "Refunds & Rebates"
+    },
+    {
+      "date": "2026-07-01",
+      "amount_cents": -3707,
+      "balance_after_cents": null,
+      "category": "Travel"
+    },
+    {
+      "date": "2026-07-01",
+      "amount_cents": -2910,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2026-07-01",
+      "amount_cents": -4985,
+      "balance_after_cents": null,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-07-02",
+      "amount_cents": -155,
+      "balance_after_cents": null,
+      "category": "Fees & Charges"
+    },
+    {
+      "date": "2026-07-03",
+      "amount_cents": -696,
+      "balance_after_cents": null,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2026-07-04",
+      "amount_cents": -2284,
+      "balance_after_cents": null,
+      "category": "Entertainment"
+    }
+  ],
+  "injected_duplicates": []
+}
