@@ -5,6 +5,9 @@ card or e-wallet statement (PDF or CSV, any bank) and the agents extract every t
 the numbers reconcile, categorise everything, flag anything worth a look, and write a plain-English
 summary of your month.
 
+**Live site: [finance-tracker-1k3.pages.dev](https://finance-tracker-1k3.pages.dev)**. No account
+needed; click **Try the demo** to see a recorded agent run without uploading anything.
+
 **Privacy by design:** statements are processed in memory and never stored on a server. Your
 transactions live only in your own browser.
 
