@@ -78,11 +78,14 @@ camera, microphone, location and payment APIs. `vite preview` applies the same p
 production build can be checked locally; the demo, charts, replay, sign-in and quota all ran
 under it with zero violations.
 
-## Still to do
+## Verified after deploying
 
-- Verify CORS against the deployed function (see docs/deploy.md). Locally, the API gateway
-  answers preflight requests itself, so this can't be tested here.
-- Confirm a real upload under the production CSP after deploying.
+- **CORS:** a preflight request to the deployed `process-statement` function from a foreign
+  origin gets no `Access-Control-Allow-Origin` header, while the app's own Pages origin is allowed
+  by name (not `*`). This couldn't be tested locally, because the local API gateway answers
+  preflight requests itself.
+- **Production CSP:** a real statement upload, the agent trace, the dashboard and the automatic
+  summary all ran on the live site with no console errors or CSP violations.
 
 ## Running the tests
 
