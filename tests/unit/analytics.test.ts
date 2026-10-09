@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { detectRecurring, monthlyTotals, spendingByCategory, summariseMonth, summaryBasis, type TxnLike } from '../../src/lib/analytics'
+import { detectRecurring, incomeSources, monthlyTotals, payerName, spendingByCategory, summariseMonth, summaryBasis, type TxnLike } from '../../src/lib/analytics'
 
 describe('summariseMonth', () => {
   const txns = [
@@ -107,5 +107,45 @@ describe('detectRecurring', () => {
 
   it('marks a subscription seen only once as possible', () => {
     expect(detectRecurring([t('2026-09-10', 'CloudStore', 'Subscriptions', -399)])[0].status).toBe('possible')
+  })
+})
+
+describe('incomeSources', () => {
+  const inc = (date: string, merchant: string, category: string, amount_cents: number, description = '') => ({
+    date, month: date.slice(0, 7), merchant, category, amount_cents, description,
+  })
+
+  it('groups income by type and payer, and ignores spending and own-account transfers', () => {
+    const [salary, received] = incomeSources([
+      inc('2026-09-25', 'Employer', 'Income', 300000),
+      inc('2026-09-10', 'Alex', 'Money received', 2000),
+      inc('2026-09-12', 'Sam', 'Money received', 1500),
+      inc('2026-09-03', 'Kopi', 'Food & Drink', -450),
+      inc('2026-09-05', 'Own account', 'Own-account transfers', 100000),
+    ], '2026-09')
+    expect(salary).toMatchObject({ category: 'Income', cents: 300000 })
+    expect(received.cents).toBe(3500)
+    expect(received.payers.map((p) => p.name)).toEqual(['Alex', 'Sam'])
+  })
+
+  it('marks a payer regular after two months at a steady amount around the same day', () => {
+    const txns = [
+      inc('2026-08-25', 'Employer', 'Income', 300000),
+      inc('2026-09-26', 'Employer', 'Income', 310000),
+      inc('2026-09-14', 'Shop', 'Refunds & Rebates', 2500),
+    ]
+    const payers = incomeSources(txns, '2026-09').flatMap((s) => s.payers)
+    expect(payers.find((p) => p.name === 'Employer')?.pattern).toBe('regular')
+    expect(payers.find((p) => p.name === 'Shop')?.pattern).toBe('one-off')
+  })
+
+  it("doesn't call anything one-off when there's only one month to go on", () => {
+    const [source] = incomeSources([inc('2026-09-25', 'Employer', 'Income', 300000)], '2026-09')
+    expect(source.payers[0].pattern).toBe('first-month')
+  })
+
+  it('names transfers in from your own account by its last 4 digits', () => {
+    expect(payerName({ merchant: 'Own account', description: 'FUND TRANSFER xxxx1001 from own account' })).toBe('Own account …1001')
+    expect(payerName({ merchant: 'Employer', description: 'SALARY' })).toBe('Employer')
   })
 })

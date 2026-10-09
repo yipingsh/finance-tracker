@@ -1,4 +1,5 @@
 import { kindOf } from '../../supabase/functions/_shared/categories.ts'
+import { accountReference } from './rules'
 
 // Pure functions over transactions: no database, no React, so they are easy to unit-test.
 
@@ -166,6 +167,66 @@ export function summariseMonth(
       .map((r) => ({ merchant: r.merchant.slice(0, 80), amount_cents: r.typical_amount_cents })),
     flags: flags.slice(0, 20).map((f) => ({ kind: f.kind.slice(0, 80), explanation: f.explanation.slice(0, 300) })),
   }
+}
+
+export type IncomePayer = {
+  name: string
+  cents: number
+  count: number
+  /** regular: paid in 2+ months at a steady amount around the same day; one-off: earlier months exist
+   *  but this payer isn't regular; first-month: no earlier months uploaded, so it can't be told yet. */
+  pattern: 'regular' | 'one-off' | 'first-month'
+}
+export type IncomeSource = { category: string; cents: number; payers: IncomePayer[] }
+
+/**
+ * Who paid you. A transfer in from your own account has a generic merchant ("Own account"), so
+ * the account's last 4 digits are added when the description has them.
+ */
+export function payerName(t: { merchant: string; description?: string }): string {
+  const base = t.merchant.trim() || t.description?.trim() || 'Unknown'
+  const ref = t.description ? accountReference(t.description) : null
+  return ref && !base.includes(ref) ? `${base} …${ref}` : base
+}
+
+/**
+ * Income for one month, by income category and then by payer, largest first. A payer is "regular"
+ * when it paid in at least two months at a steady amount (within 15% of its median; any amount for
+ * interest) around the same day of the month, using the same rules as recurring payments.
+ */
+export function incomeSources(txns: (TxnLike & { description?: string })[], month: string): IncomeSource[] {
+  const income = txns.filter((t) => t.month <= month && t.amount_cents > 0 && kindOf(t.category) === 'income')
+  const hasEarlierMonths = txns.some((t) => t.month < month)
+
+  const history = new Map<string, TxnLike[]>()
+  for (const t of income) {
+    const key = payerName(t).toLowerCase()
+    history.set(key, [...(history.get(key) ?? []), t])
+  }
+  const isRegular = (list: TxnLike[]) => {
+    const typical = median(list.map((t) => t.amount_cents))
+    const steady = list.filter((t) => t.category === 'Interest' || Math.abs(t.amount_cents - typical) <= typical * 0.15)
+    const months = new Set(steady.map((t) => t.month)).size
+    return months >= 2 && steady.length / months <= 2 && sharedDayOfMonth(steady)
+  }
+
+  const byCategory = new Map<string, Map<string, IncomePayer>>()
+  for (const t of income.filter((x) => x.month === month)) {
+    const name = payerName(t)
+    const payers = byCategory.get(t.category) ?? new Map<string, IncomePayer>()
+    const p = payers.get(name.toLowerCase()) ?? { name, cents: 0, count: 0, pattern: 'first-month' as IncomePayer['pattern'] }
+    p.cents += t.amount_cents
+    p.count++
+    p.pattern = isRegular(history.get(name.toLowerCase())!) ? 'regular' : hasEarlierMonths ? 'one-off' : 'first-month'
+    payers.set(name.toLowerCase(), p)
+    byCategory.set(t.category, payers)
+  }
+  return [...byCategory.entries()]
+    .map(([category, payers]) => {
+      const list = [...payers.values()].sort((a, b) => b.cents - a.cents)
+      return { category, cents: list.reduce((s, p) => s + p.cents, 0), payers: list }
+    })
+    .sort((a, b) => b.cents - a.cents)
 }
 
 /**
