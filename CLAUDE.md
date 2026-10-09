@@ -60,7 +60,7 @@ Windows machine; Node and Docker Desktop installed. Docker must be running for l
 npx supabase start                 # local Postgres/Auth/Gateway (data persists between runs)
 npm run functions:serve            # Edge Functions (separate terminal)
 npm run dev                        # app on http://localhost:5173
-npm test                           # 80 unit + security tests, no AI calls (needs the two above)
+npm test                           # unit + security tests, no AI calls (needs the two above)
 npm run build && npm run preview   # production build under the production CSP (port 4173)
 node scripts/run-local.ts <file>   # PAID: one statement through the pipeline, prints the trace
 node evals/run-evals.ts --resume   # PAID: eval suite, writes evals/REPORT.md
