@@ -1,8 +1,8 @@
 # Finance Tracker: project guide
 
 Personal finance tracker where Claude agents read uploaded bank/card/e-wallet statements (PDF or
-CSV, any bank), verify them, categorise transactions and write a monthly summary. Portfolio
-project; the owner wants to be able to explain every part in interviews.
+CSV, any bank), verify them, categorise transactions and write a monthly summary. Keep the code
+readable and every design decision explainable; prefer simple, well-documented solutions.
 
 ## Non-negotiables
 
