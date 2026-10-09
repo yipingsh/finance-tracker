@@ -4,21 +4,10 @@ A personal finance tracker where a team of Claude agents reads your bank, card o
 statements. Upload a PDF or CSV from any bank and the agents extract every transaction, check the
 numbers reconcile, sort them into categories, flag anything unusual and summarise your month.
 
-[![Live demo](https://img.shields.io/badge/live_demo-finance--tracker--1k3.pages.dev-2563eb?style=for-the-badge)](https://finance-tracker-1k3.pages.dev)
+Live site: https://finance-tracker-1k3.pages.dev/
 
-![React](https://img.shields.io/badge/React_19-20232a?logo=react&logoColor=61dafb)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646cff?logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-06b6d4?logo=tailwindcss&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ecf8e?logo=supabase&logoColor=white)
-![Deno](https://img.shields.io/badge/Edge_Functions_(Deno)-000000?logo=deno&logoColor=white)
-![Claude API](https://img.shields.io/badge/Claude_API-d97757?logo=anthropic&logoColor=white)
-![Cloudflare Pages](https://img.shields.io/badge/Cloudflare_Pages-f38020?logo=cloudflarepages&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-86_passing-16a34a)
-
-No account needed: open the [live site](https://finance-tracker-1k3.pages.dev) and click
-**Try the demo** to explore four sample statements and replay a real agent run. The demo makes no
-AI calls.
+No account needed. Click **Try the demo** to explore four sample statements and replay a real agent
+run. The demo makes no AI calls.
 
 ## Contents
 
