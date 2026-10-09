@@ -238,8 +238,9 @@ export function Overview({ month, onMonth, onUpload, onDemo, onViewTransactions,
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 xl:grid-cols-12">
-        {/* self-start: sized to its rows, so it doesn't stretch to match the column beside it */}
+      {/* auto_1fr: any extra height from a long summary goes below Worth a look, not between the two left cards */}
+      <div className="grid grid-cols-1 gap-6 xl:grid-cols-12 xl:grid-rows-[auto_1fr]">
+        {/* self-start: each card is sized to its own rows instead of stretching */}
         <section className={`${card} self-start xl:col-span-7`}>
           <CardHeader
             title="Recent transactions"
@@ -268,36 +269,38 @@ export function Overview({ month, onMonth, onUpload, onDemo, onViewTransactions,
           </ul>
         </section>
 
-        <div className="space-y-6 xl:col-span-5">
+        {/* Spans both rows on the right; in one column on phones it sits between the two. */}
+        <div className="xl:col-span-5 xl:row-span-2">
           {/* Read-only in the demo: a demo visitor never triggers AI calls. */}
           <InsightCard month={current.month} readOnly={demo} />
-          <section className={card}>
-            <CardHeader title="Worth a look" subtitle={anomalies.length ? `${anomalies.length} flagged by the anomaly checker` : undefined} />
-            {anomalies.length === 0 ? <p className="px-5 py-4 text-sm text-(--text-3)">Nothing flagged.</p> : (
-              <ul className="divide-y divide-(--border)">
-                {flags.map((a) => {
-                  const related = a.transaction_ids.map((id) => txnById.get(id)).filter(Boolean)
-                  return (
-                    <li key={a.id} className="flex items-start justify-between gap-3 px-5 py-3 text-sm" title={related.map((t) => `${t!.date} ${money(t!.amount_cents)}`).join(' · ')}>
-                      <span>
-                        <span className="mr-2 rounded-md border border-(--border) px-1.5 py-0.5 text-xs text-(--text-2)">{a.kind.replace('_', ' ')}</span>
-                        {a.explanation}
-                      </span>
-                      <button onClick={() => db.anomalies.update(a.id, { status: 'dismissed' })} className="shrink-0 text-xs font-medium text-(--link) hover:underline">Dismiss</button>
-                    </li>
-                  )
-                })}
-                {anomalies.length > 3 && (
-                  <li className="px-5 py-3">
-                    <button onClick={() => setShowAllFlags(!showAllFlags)} className="text-xs font-medium text-(--link) hover:underline">
-                      {showAllFlags ? 'Show fewer' : `Show all ${anomalies.length}`}
-                    </button>
-                  </li>
-                )}
-              </ul>
-            )}
-          </section>
         </div>
+
+        <section className={`${card} self-start xl:col-span-7`}>
+          <CardHeader title="Worth a look" subtitle={anomalies.length ? `${anomalies.length} flagged by the anomaly checker` : undefined} />
+          {anomalies.length === 0 ? <p className="px-5 py-4 text-sm text-(--text-3)">Nothing flagged.</p> : (
+            <ul className="divide-y divide-(--border)">
+              {flags.map((a) => {
+                const related = a.transaction_ids.map((id) => txnById.get(id)).filter(Boolean)
+                return (
+                  <li key={a.id} className="flex items-start justify-between gap-3 px-5 py-3 text-sm" title={related.map((t) => `${t!.date} ${money(t!.amount_cents)}`).join(' · ')}>
+                    <span>
+                      <span className="mr-2 rounded-md border border-(--border) px-1.5 py-0.5 text-xs text-(--text-2)">{a.kind.replace('_', ' ')}</span>
+                      {a.explanation}
+                    </span>
+                    <button onClick={() => db.anomalies.update(a.id, { status: 'dismissed' })} className="shrink-0 text-xs font-medium text-(--link) hover:underline">Dismiss</button>
+                  </li>
+                )
+              })}
+              {anomalies.length > 3 && (
+                <li className="px-5 py-3">
+                  <button onClick={() => setShowAllFlags(!showAllFlags)} className="text-xs font-medium text-(--link) hover:underline">
+                    {showAllFlags ? 'Show fewer' : `Show all ${anomalies.length}`}
+                  </button>
+                </li>
+              )}
+            </ul>
+          )}
+        </section>
       </div>
 
     </div>
