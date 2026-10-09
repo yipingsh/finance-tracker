@@ -239,7 +239,8 @@ export function Overview({ month, onMonth, onUpload, onDemo, onViewTransactions,
       </div>
 
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-12">
-        <section className={`${card} xl:col-span-7`}>
+        {/* self-start: sized to its rows, so it doesn't stretch to match the column beside it */}
+        <section className={`${card} self-start xl:col-span-7`}>
           <CardHeader
             title="Recent transactions"
             action={
@@ -268,6 +269,8 @@ export function Overview({ month, onMonth, onUpload, onDemo, onViewTransactions,
         </section>
 
         <div className="space-y-6 xl:col-span-5">
+          {/* Read-only in the demo: a demo visitor never triggers AI calls. */}
+          <InsightCard month={current.month} readOnly={demo} />
           <section className={card}>
             <CardHeader title="Worth a look" subtitle={anomalies.length ? `${anomalies.length} flagged by the anomaly checker` : undefined} />
             {anomalies.length === 0 ? <p className="px-5 py-4 text-sm text-(--text-3)">Nothing flagged.</p> : (
@@ -294,8 +297,6 @@ export function Overview({ month, onMonth, onUpload, onDemo, onViewTransactions,
               </ul>
             )}
           </section>
-          {/* Read-only in the demo: a demo visitor never triggers AI calls. */}
-          <InsightCard month={current.month} readOnly={demo} />
         </div>
       </div>
 

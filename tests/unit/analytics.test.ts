@@ -139,6 +139,15 @@ describe('incomeSources', () => {
     expect(payers.find((p) => p.name === 'Shop')?.pattern).toBe('one-off')
   })
 
+  it('counts dividends as regular even though the amount changes each time', () => {
+    const [source] = incomeSources([
+      inc('2026-08-15', 'DBS Group', 'Investment income', 4200),
+      inc('2026-09-16', 'DBS Group', 'Investment income', 6100),
+    ], '2026-09')
+    expect(source).toMatchObject({ category: 'Investment income', cents: 6100 })
+    expect(source.payers[0].pattern).toBe('regular')
+  })
+
   it("doesn't call anything one-off when there's only one month to go on", () => {
     const [source] = incomeSources([inc('2026-09-25', 'Employer', 'Income', 300000)], '2026-09')
     expect(source.payers[0].pattern).toBe('first-month')

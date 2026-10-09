@@ -179,6 +179,9 @@ export type IncomePayer = {
 }
 export type IncomeSource = { category: string; cents: number; payers: IncomePayer[] }
 
+/** Income that repeats but whose amount naturally changes each time. */
+const VARYING_INCOME = new Set(['Interest', 'Investment income'])
+
 /**
  * Who paid you. A transfer in from your own account has a generic merchant ("Own account"), so
  * the account's last 4 digits are added when the description has them.
@@ -192,7 +195,7 @@ export function payerName(t: { merchant: string; description?: string }): string
 /**
  * Income for one month, by income category and then by payer, largest first. A payer is "regular"
  * when it paid in at least two months at a steady amount (within 15% of its median; any amount for
- * interest) around the same day of the month, using the same rules as recurring payments.
+ * interest and investment income) around the same day of the month, using the same rules as recurring payments.
  */
 export function incomeSources(txns: (TxnLike & { description?: string })[], month: string): IncomeSource[] {
   const income = txns.filter((t) => t.month <= month && t.amount_cents > 0 && kindOf(t.category) === 'income')
@@ -205,7 +208,7 @@ export function incomeSources(txns: (TxnLike & { description?: string })[], mont
   }
   const isRegular = (list: TxnLike[]) => {
     const typical = median(list.map((t) => t.amount_cents))
-    const steady = list.filter((t) => t.category === 'Interest' || Math.abs(t.amount_cents - typical) <= typical * 0.15)
+    const steady = list.filter((t) => VARYING_INCOME.has(t.category) || Math.abs(t.amount_cents - typical) <= typical * 0.15)
     const months = new Set(steady.map((t) => t.month)).size
     return months >= 2 && steady.length / months <= 2 && sharedDayOfMonth(steady)
   }

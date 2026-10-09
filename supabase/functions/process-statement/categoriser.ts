@@ -61,6 +61,9 @@ ${CATEGORIES.map((c) => `  - ${c.name} (${c.kind})`).join("\n")}
   own investment or savings apps, paying off their own credit card, topping up a wallet from
   their bank such as "Bank Deposit to PP Account") is a transfer, not spending or income.
 - Small rebates and cashback are "Refunds & Rebates". Bank interest is "Interest".
+- Dividends, fund or REIT distributions and bond coupons are "Investment income". Money moved to
+  or from the owner's own investment accounts (top-ups, withdrawals, sale proceeds) stays
+  "Investments & Savings": a statement doesn't show what was paid, so it can't show a gain.
 - If the owner has a rule for a merchant and direction ("out" = money out, "in" = money in), use
   the rule's category.
 - confidence: "low" when the description doesn't make the category clear.

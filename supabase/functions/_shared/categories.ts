@@ -23,6 +23,7 @@ export const CATEGORIES = [
   { name: "Money received", kind: "income" },
   { name: "Refunds & Rebates", kind: "income" },
   { name: "Interest", kind: "income" },
+  { name: "Investment income", kind: "income" },
   { name: "Own-account transfers", kind: "transfer" },
   { name: "Investments & Savings", kind: "transfer" },
 ] as const;

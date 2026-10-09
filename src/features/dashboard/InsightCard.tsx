@@ -11,7 +11,7 @@ export function InsightCard({ month, readOnly }: { month: string; readOnly?: boo
   const outOfDate = useLiveQuery(() => (readOnly ? false : isInsightOutOfDate(month)), [month, readOnly])
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
-  const [expanded, setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(true)
 
   async function generate() {
     setBusy(true)
